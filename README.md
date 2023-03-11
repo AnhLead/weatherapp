@@ -1,31 +1,23 @@
-# Weather App
+Simple Weather App
+This is a simple weather app built using React, Node.js, and Docker. It allows users to enter a location and see the weather forecast for that location.
 
-This is a simple weather app built with React. It allows users to search for a city and see the current weather and a 5-day forecast.
+Installation
+To run this app, you will need Docker installed on your machine. Once Docker is installed, follow these steps:
 
-## Installation
+Clone this repository to your local machine.
+Navigate to the root directory of the project.
+Run docker-compose up to start the app.
+Open your web browser and go to http://localhost:3000.
+Enter a location in the input field and click the "Check Weather" button to see the weather forecast for that location.
+Technologies Used
+React
+Node.js
+Docker
+API Used
+This app uses the OpenWeatherMap API to retrieve weather data for a given location.
 
-1. Clone the repository: `git clone https://github.com/yourusername/weather-app.git`
-2. Navigate to the project directory: `cd weather-app`
-3. Install dependencies: `npm install`
+Contributing
+Contributions are welcome! Please open an issue or submit a pull request if you would like to contribute to this project.
 
-## Usage
-
-1. Start the development server: `npm start`
-2. Open a web browser and go to http://localhost:3000
-3. Type the name of a city into the search bar and press enter
-4. See the current weather and 5-day forecast for the city you searched for
-
-## Technologies Used
-
-- React
-- OpenWeatherMap API
-- Bootstrap
-- Axios
-
-## Contributing
-
-Contributions are welcome! If you find a bug or want to suggest a new feature, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+License
+This project is licensed under the MIT License. See the LICENSE file for more information.
