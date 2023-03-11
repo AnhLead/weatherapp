@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: ./weather-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./weather-app/src:/app/src
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - server
+  server:
+    build: ./server
+    ports:
+      - "8080:8080"
