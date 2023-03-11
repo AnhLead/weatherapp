@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [location, setLocation] = useState('');
@@ -22,22 +23,30 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Weather App</h1>
-      <input
-        type="text"
-        placeholder="Enter location"
-        value={location}
-        onChange={handleLocationChange}
-      />
-      <button onClick={handleCheckWeatherClick}>Check Weather</button>
+    <div className="App container-fluid bg-dark text-white">
+      <h1 className="text-center my-5">Weather App</h1>
+      <div className="form-group">
+        <input
+          type="text"
+          className="form-control form-control-lg"
+          placeholder="Enter location"
+          value={location}
+          onChange={handleLocationChange}
+        />
+      </div>
+      <div className="d-flex justify-content-center mt-4">
+        <button className="btn btn-primary btn-lg" onClick={handleCheckWeatherClick}>
+          Check Weather
+        </button>
+      </div>
       {weatherData && (
-        <div>
+        <div className="mt-5">
           <h2>{weatherData.city.name} Weather Forecast</h2>
-          <ul>
+          <ul className="list-unstyled">
             {weatherData.list.map((item) => (
-              <li key={item.dt}>
-                {item.dt_txt} - {item.main.temp} °F - {item.weather[0].description}
+              <li key={item.dt} className="mb-3">
+                <strong>{item.dt_txt}</strong> -
+                {item.main.temp} °F - {item.weather[0].description}
               </li>
             ))}
           </ul>
